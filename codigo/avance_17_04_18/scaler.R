@@ -14,6 +14,6 @@ write.csv(train,"train_sc.csv")
 
 #data <- scale(data)
 
-val <- data[-c(1:111),]
+val <- data[-c(1:222),]
 
 write.csv(val,"val_sc.csv")
