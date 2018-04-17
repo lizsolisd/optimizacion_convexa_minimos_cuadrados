@@ -16,7 +16,7 @@ Para probar la correcta ejecución del código se utilizaron los datos de Boston
 
 El procesamiento de estos datos se ejecuta con el archivo preproc.sh. Este procesamineto consiste en los siguientes pasos:  
   
-1. A través de R, eliminar la primera columna (consiste en un ID) y escalar los datos para tener una mejor convergencia.  
+1. A través de R, eliminar la primera columna (consiste en un ID) y escalar los datos para tener una mejor convergencia. Además, separa los datos en entrenamiento (66%) y validación(33%).   
   
 2. Separar los datos en covariables (X) y objetivo (y), separar los datos en espacios y eliminar los nombres de las columnas.  
 
