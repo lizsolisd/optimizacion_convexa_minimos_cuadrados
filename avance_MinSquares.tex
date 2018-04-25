@@ -123,9 +123,7 @@ anteriormente.
 
 \newpage
 
-\section{Algorítmos de optimización convexa}
-
-\subsection{Método de Descenso}
+\section{Algorítmos de optimización convexa: Métodos de Descenso}
 
 El método de descenso consiste en producir una secuencia de valores
 \[x^{(k)}, \ k=1,...,\] de la siguiente forma:\\
@@ -135,23 +133,31 @@ Esta secuencia cumple la característica de que
 \[f(x^{(k+1)})<f(x^{(k)})\], excepto en el caso cuando \[x^{(k)}\] es el
 óptimo.
 
-\begin{algorithm}[H]
- \KwData{this text}
- \KwResult{how to write algorithm with \LaTeX2e }
- initialization\;
- \While{not at end of this document}{
-  read current\;
-  \eIf{understand}{
-   go to next section\;
-   current section becomes this one\;
-   }{
-   go back to the beginning of current section\;
-  }
- }
- \caption{How to write algorithms}
-\end{algorithm}
+\textbf{Algorítmo de Descenso General}\\
+Dado un punto inicial \[x \in dom \ f\]\\
+Repetir:\\
+1. Determinar dirección de descenso \[\triangle x\]\\
+2. Elegir tamaño de paso \[t>0\]\\
+3. Actualizar \[x:=x+ t \triangle x\]\\
+Hasta que el criterio de fin se satisfaga.
 
-\subsection{Método de Descenso en Gradiente}
+El criterio de fin generalmente tiene la forma
+\[||\nabla f(x)||_2 \leq \eta\], para \[\eta\] muy pequeña y positiva.\\
+\subsection{Método de Descenso en Gradiente}\\
+Un ejemplo de un algorítmo de descenso es el que es conocido como
+descenso en gradiente. Su particularidad con respecto al modelo de
+descenso general, es la elección para la dirección de descenso, que en
+este caso es la siguiente:\\
+\[\triangle x = - \nabla f(x)\]. Con esto, resulta en el siguiente
+algorítmo:
+
+\textbf{Algorítmo de Descenso en Gradiente}\\
+Dado un punto inicial \[x \in dom \ f\]\\
+Repetir:\\
+1. \[\triangle x = - \nabla f(x)\]\\
+2. Elegir tamaño de paso \[t>0\]\\
+3. Actualizar \[x:=x+ t \triangle x\]\\
+Hasta que el criterio de fin se satisfaga.
 
 \subsection{Método de Descenso Máximo}
 
@@ -172,6 +178,15 @@ En esta sección se encuentran los códigos implementados.
 \newpage
 
 \section{Referencias}
+
+\begin{itemize}
+\tightlist
+\item
+  Boyd, S. P., \& Vandenberghe, L. (2009). Convex optimization.
+  Cambridge: Cambridge University Press.\\
+\item
+  Capítulo 1 y 9
+\end{itemize}
 
 
 \end{document}
